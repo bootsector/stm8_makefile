@@ -1,5 +1,5 @@
 CC = /Applications/sdcc-3.8.0/bin/sdcc
-ASM = /Applications/sdcc-3.8.0/bin/sdasz80
+ASM = /Applications/sdcc-3.8.0/bin/sdasstm8
 OBJCOPY = /Applications/sdcc-3.8.0/bin/sdobjcopy
 RM = rm -f
 
