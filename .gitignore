@@ -1,0 +1,12 @@
+.DS_Store
+*.asm
+*.cdb
+*.ihx
+*.lk
+*.lst
+*.map
+*.noi
+*.rel
+*.sym
+*.rst
+*.bin
