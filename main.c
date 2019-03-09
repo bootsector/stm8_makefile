@@ -18,7 +18,7 @@
 #define LED_PIN     5
 
 void main() {
-	PB_DDR |= (1 << LED_PIN); // configure PD4 as output
+	PB_DDR |= (1 << LED_PIN); // configure PB5 as output
 	PB_CR1 |= (1 << LED_PIN); // push-pull mode
 
 	while (1) {
