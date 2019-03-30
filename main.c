@@ -24,6 +24,6 @@ void main() {
 	while (1) {
 		/* toggle pin every 1s */
 		PB_ODR ^= (1 << LED_PIN);
-		delay_ms(1280);
+		delay_ms(1000);
 	}
 }

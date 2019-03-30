@@ -24,7 +24,20 @@ void delay_us(uint16_t us) {
 }
 
 void delay_ms(uint16_t ms) {
-	for(uint16_t i = 0; i < ms; i++) {
-		delay_us(1000);
+	// 125 times in 1ms
+	TIM2_PSCR = 0x04;
+
+	// Initialize counter
+	bit_set(TIM2_EGR, 1 << 0);
+
+	// Enable counter
+	bit_set(TIM2_CR1, 1 << 0);
+
+	while(ms > 0) {
+		while(TIM2_CNTR < 125);
+
+		TIM2_CNTR = 0;
+
+		ms--;
 	}
 }
