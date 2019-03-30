@@ -39,5 +39,8 @@ build: $(TARGET).ihx
 flash: $(TARGET).ihx
 	stm8flash -c stlinkv2 -p ${DEVICE} -w $(TARGET).ihx
 
+flash_unlock:
+	stm8flash -c stlinkv2 -p ${DEVICE} -u
+
 clean:
 	${RM} *.asm *.cdb *.ihx *.lk *.lst *.map *.noi *.rel *.sym *.rst *.bin

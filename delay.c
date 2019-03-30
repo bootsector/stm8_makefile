@@ -14,10 +14,10 @@ void delay_us(uint16_t us) {
 	TIM2_PSCR = 0x01;
 
 	// Initialize counter
-	TIM2_EGR |= (1 << 1);
+	bit_set(TIM2_EGR, 1 << 0);
 
 	// Enable counter
-	TIM2_CR1 |= (1 << 1);
+	bit_set(TIM2_CR1, 1 << 0);
 
 	// Wait until counter reaches requested us
 	while(TIM2_CNTR < us);

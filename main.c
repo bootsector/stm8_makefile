@@ -18,12 +18,12 @@
 #define LED_PIN     5
 
 void main() {
-	PB_DDR |= (1 << LED_PIN); // configure PB5 as output
-	PB_CR1 |= (1 << LED_PIN); // push-pull mode
+	bit_set(PB_DDR, 1 << LED_PIN);
+	bit_set(PB_CR1, 1 << LED_PIN);
 
 	while (1) {
 		/* toggle pin every 1s */
 		PB_ODR ^= (1 << LED_PIN);
-		delay_ms(1000);
+		delay_ms(1280);
 	}
 }

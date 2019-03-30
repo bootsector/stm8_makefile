@@ -11,6 +11,9 @@
 
 #include <stdint.h>
 
+#define bit_set(p,m) ((p) |= (m))
+#define bit_clear(p,m) ((p) &= ~(m))
+
 #define _SFR8_(mem_addr)    (*(volatile uint8_t *)(0x5000 + (mem_addr)))
 #define _SFR16_(mem_addr)   (*(volatile uint16_t *)(0x5000 + (mem_addr)))
 
